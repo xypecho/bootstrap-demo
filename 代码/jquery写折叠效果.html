@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../bs/css/bootstrap.css">
+	<script type="text/javascript" src="../bs/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../bs/js/docs.min.js"></script>
+	<script type="text/javascript" src="../bs/js/bootstrap.js"></script>
+</head>
+<body>
+	<div class="container" style="margin-top: 100px">
+		
+	
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+				<div class="panel-title"><a href="javascript:">java</a></div>
+			</div>
+			<div class="panel-body">
+				java is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very much
+			</div>
+		</div>
+	
+	
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+				<div class="panel-title"><a href="javascript:">java</a></div>
+			</div>
+			<div class="panel-body">
+				java is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very much
+			</div>
+		</div>
+
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+				<div class="panel-title"><a href="javascript:">php</a></div>
+			</div>
+			<div class="panel-body">
+				java is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very much
+			</div>
+		</div>
+
+	</div>
+</body>
+<script type="text/javascript">
+// $(".panel-body").hide().first().show();
+
+
+	$(".panel-title").click(function(){
+		$(this).parent().next().slideDown();
+		$(".panel-body").not($(this).parent().next()).slideUp();
+	})
+</script>
+</html>

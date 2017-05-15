@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="../bs/js/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../bs/css/bootstrap.css">
+	<script type="text/javascript" src="../bs/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../bs/js/holder.js"></script>
+	<style type="text/css">
+		body{
+			padding-top: 100px;
+			/*position: relative;*/
+		}
+		.list-group{
+			position:fixed;
+		}
+
+	</style>
+</head>
+<body data-spy="scroll" data-target="#ro" >
+	<div class="container">
+	<div class="row" >
+		<div class="col-md-1" id="ro">
+			<ul class="list-group">
+			<li id="java" class="list-group-item active "><a href="#java">java</a></li>
+			<li id="php" class="list-group-item"><a href="#php">php</a></li>
+			<li id="js" class="list-group-item"><a href="#js">js</a></li>
+			<li id="html" class="list-group-item"><a href="#html">html</a></li>
+			
+		</ul>
+		</div>
+		<div class="col-md-11">
+
+			<div class="panel panel-danger" idx="java">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<h1 >java</h1>
+				</div>
+			</div>
+			<div class="panel-body">
+			<img src="holder.js/100px300">
+				<p>java is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very much</p>
+			</div>
+		</div>
+
+
+
+		<div class="panel panel-info" idx="php">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<h1 >php</h1>
+				</div>
+			</div>
+			<div class="panel-body">
+			<img src="holder.js/100px300">
+				<p>php is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very much>php is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very much>php is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very much>php is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very much</p>
+			</div>
+		</div>
+
+		<div class="panel panel-primary" idx="js">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<h1 >js</h1>
+				</div>
+			</div>
+			<div class="panel-body">
+			<img src="holder.js/100px300">
+				<p>js is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very js is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very js is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very js is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very muchjs is very much</p>
+			</div>
+		</div>
+
+		<div class="panel panel-warning" idx="html">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<h1  >html</h1>
+				</div>
+			</div>
+			<div class="panel-body">
+			<img src="holder.js/100px300">
+				<p>html is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very muchhtml is very much</p>
+			</div>
+		</div>
+		</div>
+	</div>
+		
+		
+		
+	</div>
+</body>
+	<script type="text/javascript">
+		$(window).scroll(function(){
+			$(".panel").each(function(){
+				st=$(window).scrollTop();	//页面已经滚动的距离
+				pt=$(this).offset().top;	//获取class为panel的div的高
+
+				if (st>=(pt-200)) {
+					idx=$(this).attr("idx");
+					$("#"+idx).addClass("active");
+					$(".list-group-item").not($("#"+idx)).removeClass("active");
+				}
+
+			})
+		})
+	</script>
+</html>

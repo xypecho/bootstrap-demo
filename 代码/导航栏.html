@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../bs/css/bootstrap.css">
+	<script type="text/javascript" src="../bs/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../bs/js/jquery-1.8.3.min.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-2">
+			<ul class="nav nav-tabs">
+			<li role="presentation" class="active  btn">
+				<a href="#">Home</a>
+			</li>
+			<li role="presentation"  class="btn btn-danger">
+				<a href="#">Profile</a>
+			</li>
+			<li role="presentation"   class="btn btn-danger">
+				<a href="#">Messages</a>
+			</li>
+			<li role="presentation"   class="btn btn-danger">
+				<a href="#">Messages</a>
+			</li>
+		</ul>
+		</div>
+		<div class="col-md-10">
+			<div class="navs">java is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very muchjava is very much</div>
+		<div class="navs">much iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</div>
+		<div class="navs">papapppppppppppppppppppppppppppppp</div>
+		<div class="navs">百度基于17年技术积累,开放核心基础架构技术,为广大公有云需求者提供高性能云计算产品.优势服务:免费快速备案,故障百倍赔偿,7×24客户服务,内部生态支持</div>
+	</div>
+		</div>
+		
+</body>
+	<script type="text/javascript">
+		$("li").mouseenter(function(){
+			$(this).addClass("active");
+			$("li").not($(this)).removeClass("active");
+			idx=$(this).index("li");
+			$(".navs").eq(idx).show(1000);
+			$(".navs").not($(".navs").eq(idx)).hide(1000);
+		})
+		$(".navs").eq(0).show(1000);
+	</script>
+</html>

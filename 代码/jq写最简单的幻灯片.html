@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style type="text/css">
+		.container{
+			width: 1024px;
+			padding: 0px 150px;
+			margin: 0 auto;
+		}
+		.window{
+			height: 500px;
+			position: relative;
+			overflow: hidden;
+		}
+		.window img{
+			position:absolute;
+			top: 0px;
+			left: 0px;
+		}
+	</style>
+	<script type="text/javascript" src="../bs/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="window">
+			<img src="../t.jpg">
+			<img src="../g.jpg">
+			<img src="../i.jpg">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	// imgs=$(".window img");
+	setInterval(function(){
+		$(".window img").eq(2).stop().fadeOut(1000,function(){
+			$(this).show().prependTo(".window");
+		});
+
+	},3000);
+</script>
+</html>

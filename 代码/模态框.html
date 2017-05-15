@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../bs/css/bootstrap.css">
+	<script type="text/javascript" src="../bs/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../bs/js/bootstrap.js"></script>
+</head>
+
+<body>
+	<div class="container">
+	
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal" >点开发现更多</button>
+		<div class="modal fade bs-example-modal-sm" id="mymodal">
+			<div class="modal-dialog modal-sm">     <!--modal-sm弹框的大小-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal"><span>&times;</span></button>
+						<h4 class="modal-title">你好，世界</h4>
+					</div>
+					<div class="modal-body">
+						<span>对于 dialog 来说，首先需要进行初始化，在调用 dialog 函数的时候，如果没有传递参数，或者传递了一个对象，那么就表示在初始化一个对话框。
+
+没有参数，表示按照默认的设置初始化对话框，在当前最新版本的 jQuery UI 1.8.9 中， dialog 支持下列属性。
+
+autoOpen   初始化之后，是否立即显示对话框，默认为 true
+</span>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">close</button>
+						<button class="btn btn-primary save">agree</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(".save").click(function(){
+		alert("登录成功");
+		$('#mymodal').modal('hide');        //在点击alert弹窗按钮后，整个modal消失
+
+	})
+	$("#mymodal").on("shown.bs.modal",function(e){
+			$("body").css("backgroundColor","red")
+		});
+	$("#mymodal").on("hidden.bs.modal",function(e){
+			$("body").css("backgroundColor","pink")
+		});
+</script>
+</html>
