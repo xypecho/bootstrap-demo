@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="../bs/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+
+			<p>
+				<input type="checkbox" name="">football
+			</p>
+			<p>
+				<input type="checkbox" name="">ball
+			</p>
+			<p>
+				<input type="checkbox" name="">football
+			</p>
+			<p>
+				<input type="checkbox" name="">ball
+			</p>
+			<p>
+				<input type="checkbox" name="">football
+			</p>
+			<p>
+				<input type="checkbox" name="">ball
+			</p>
+	
+
+	<button class="all">全选</button>
+	<button class="notall">全不选</button>
+	<button class="unall">反选</button>
+</body>
+	<script type="text/javascript">
+		$(".all").click(function(){
+			$(":checkbox").attr({"checked":true});
+		})
+		$(".notall").click(function(){
+			$(":checkbox").attr({"checked":false});
+		})
+		$(".unall").click(function(){
+			$(":checkbox").each(function(){
+				this.checked=!this.checked;
+			});
+		});
+	</script>
+</html>
